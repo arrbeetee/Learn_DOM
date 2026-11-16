@@ -38,3 +38,44 @@ There are three types of html buttons
 type = "button" is a regular button
 type = "submit" submits the form it belongs to
 type = "reset" resets the form fields to their original values
+
+<!-- input  -->
+JS can acess following properties:
+.value - the text entered
+.type - input type, e.g. "text", "radio" or "checkbox"
+.checked - whether a radio or checkbox button is selected
+.name and .id - the inputs name and identifier
+.placeholder - hint text, if provided
+.disabled - whether the input is disabled
+
+
+firstName.value and .checked are read at the beginning when the page loads. 
+They are not updating as I type something in it or check the box.
+To read the firstName add:
+firstName.addEventListener("input", () => {
+  console.log(firstName.value);
+});
+and
+const agree = document.getElementById("agree");
+agree.addEventListener("change", () => {
+    console.log(agree.checked);
+})
+
+To create a placeholder into an empty text field enter:
+firstName.placeholder = "Enter your fist name";
+
+Clickable round buttons are called radio buttons.
+A third button with the label medium can be created with:
+const mediumRadio = document.createElement("input");
+mediumRadio.type = "radio";
+mediumRadio.id = "sizeMedium";
+mediumRadio.name = "size";
+mediumRadio.value = "medium";
+
+const mediumLabel = document.createElement("label");
+mediumLabel.htmlFor = "sizeMedium";
+mediumLabel.textContent = "Medium";
+
+To put it in between the small and large radio button enter:
+const smallLabel = document.querySelector('label[for="sizeSmall"]');
+smallLabel.after(mediumRadio, mediumLabel);

@@ -11,12 +11,44 @@ form.style.backgroundColor = "lightblue";
 // dom element: button
 const button = document.getElementById("submitBtn");
 button.textContent = "Click me";
-button.disabled = true;
+
 button.type = "button";
 
-const newButton = document.createElement("button")
-newButton.type = "reset"
-newButton.textContent = "Reset"
-button.value = "byebye";
+const newButton = document.createElement("button");
+newButton.type = "reset";
+newButton.textContent = "Reset";
+newButton.disabled = true;
+newButton.value = "byebye";
 console.log(button.value);
-form.appendChild(newButton)
+form.appendChild(newButton);
+
+// dom element: input
+// read the value as you type
+const firstName = document.getElementById("name");
+firstName.addEventListener("input", () => {
+  console.log(firstName.value);
+});
+
+const agree = document.getElementById("agree");
+agree.addEventListener("change", () => {
+    console.log(agree.checked);
+})
+
+// enter a placeholder in the text field
+firstName.placeholder = "Enter your fist name";
+
+// add medium radio button
+const mediumRadio = document.createElement("input");
+mediumRadio.type = "radio";
+mediumRadio.id = "sizeMedium";
+mediumRadio.name = "size";
+mediumRadio.value = "medium";
+
+const mediumLabel = document.createElement("label");
+mediumLabel.htmlFor = "sizeMedium";
+mediumLabel.textContent = "Medium";
+
+
+const smallLabel = document.querySelector('label[for="sizeSmall"]');
+smallLabel.after(mediumRadio, mediumLabel);
+
