@@ -20,3 +20,21 @@ Then you can for example change the background: form.style.backgroundColor = "li
 form can have other properties besides id such as action, method.
 action: says where the form sends its data.
 method: how the data is sent
+
+<!-- button -->
+JS can access following properties:
+id - identifier
+type - its type (wont submit form)
+textContent - the displayed text in the button
+disabled - whether its disabled
+value - if a value is set, it can be displayed with console.log()
+
+To change the buttont content, first find the button in js: const button = document.getElementById("submitBtn")
+Then change the displayed text: button.textContent = "Click me";
+
+To disable a button (button still displayed but not clickable) type : button.disabled = true;
+
+There are three types of html buttons
+type = "button" is a regular button
+type = "submit" submits the form it belongs to
+type = "reset" resets the form fields to their original values
