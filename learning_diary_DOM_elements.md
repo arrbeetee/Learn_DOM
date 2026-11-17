@@ -94,3 +94,18 @@ box.hidden - reads or changes whether its hidden
 I changed some css style elements and  the text content of the div in js.
 It is also possible to create a css class for the div in js,
 but I would need to create a separate css file in order to change its style.
+
+<!-- table -->
+call the table
+const table = document.getElemenById("myTable");
+
+table.id - gives the table's id
+table.rows - gives all rows, including the header row
+table.head - access the head section
+table.body - access the body section
+table.caption - access to the tables caption
+table.style - changes the appearance
+
+Changed the style and edited the text of the first cell from Name to FirstName.
+I was able to change the name of the person Anna to Maria.
+Also added a table caption to tell that the table represents the people's name and age.

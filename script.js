@@ -55,12 +55,29 @@ smallLabel.after(mediumRadio, mediumLabel);
 
 // dom element: div
 // const box = document.getElementById("myDiv"); <-- deactivated because already on top
-// change css properties 
+// change style
 box.style.color = "blue";
 box.style.backgroundColor = "orange";
 box.style.fontSize = "50px";
-box.style.padding = "10px"
+box.style.padding = "10px";
 
 // change the content of the div 
-box.textContent = "Wilkommen auf meiner Test-Website"
+box.textContent = "Wilkommen auf meiner Test-Website";
 
+
+// dom element: table
+const table = document.getElementById("myTable");
+
+// change stylee 
+table.style.backgroundColor = "beige";
+table.style.color = "red";
+
+// access the table head first cell and change Name to First Name
+table.tHead.rows[0].cells[0].textContent = "First Name";
+
+// access the table body first cell and change the persons name from Anna to Maria
+table.tBodies[0].rows[0].cells[0].textContent = "Maria";
+
+// create a caption for the table
+const caption = table.createCaption();
+caption.textContent = "People and their ages";
