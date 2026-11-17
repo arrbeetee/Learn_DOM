@@ -95,3 +95,23 @@ list.children[2].textContent = "The last item";
 
 // edit the inline style
 list.style.color = "green"
+
+
+// dom element: canvas
+// create the canvas
+const canvas = document.createElement("canvas");
+canvas.id = "myCanvas";
+canvas.width = 300;
+canvas.height = 150;
+canvas.style.border = "1px solid black";
+canvas.style.border = "2px solid black";
+
+
+// append it at the bottom of the body
+document.body.appendChild(canvas);
+
+// draw the austrian flag
+const context = canvas.getContext("2d");
+context.fillStyle = "red";
+context.fillRect(0, 0, 300, 50);
+context.fillRect(0, 100, 300, 50);

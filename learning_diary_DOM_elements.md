@@ -130,3 +130,17 @@ children refers to the element’s child elements.
 For example, the <ul> is the parent, and the <li> elements inside it are its children.
 HTML is arranged like a family tree. list.children[1] refers to the second <li> element in the list,
 because JS starts indexing with 0.
+
+<!-- canvas -->
+The html doesnt have a canvas yet. Need to create one.
+const canvas = document.createElement("canvas");
+canvas.id = "myCanvas";
+
+Access to
+canvas.width and .height --> drawing dimensions
+canvas.id - id of the canvas
+canvas.style - css inline style
+canvas.getContext("2d")
+
+created a canvas board and drew the austrian flag with a black border
+getContext("2d") --> Context gives the drawing tools, 2d means the browser draws the pixels flat.
