@@ -48,7 +48,19 @@ const mediumLabel = document.createElement("label");
 mediumLabel.htmlFor = "sizeMedium";
 mediumLabel.textContent = "Medium";
 
-
+// place the medium radio in between the small and large radio 
 const smallLabel = document.querySelector('label[for="sizeSmall"]');
 smallLabel.after(mediumRadio, mediumLabel);
+
+
+// dom element: div
+// const box = document.getElementById("myDiv"); <-- deactivated because already on top
+// change css properties 
+box.style.color = "blue";
+box.style.backgroundColor = "orange";
+box.style.fontSize = "50px";
+box.style.padding = "10px"
+
+// change the content of the div 
+box.textContent = "Wilkommen auf meiner Test-Website"
 

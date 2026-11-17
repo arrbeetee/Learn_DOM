@@ -79,3 +79,18 @@ mediumLabel.textContent = "Medium";
 To put it in between the small and large radio button enter:
 const smallLabel = document.querySelector('label[for="sizeSmall"]');
 smallLabel.after(mediumRadio, mediumLabel);
+
+<!-- div -->
+First we need to create a JS variable of the div so we can access it in html.
+const box = document.getElementById("myDiv");
+
+box.id - can read and change the id "myDiv"
+box.textContent - read or changes its text
+box.innerHTML - reads or changes the HTML inside it
+box.className - read or changes the CSS class
+box.style - able to change the inline styles --> box.style.color = "blue"
+box.hidden - reads or changes whether its hidden
+
+I changed some css style elements and  the text content of the div in js.
+It is also possible to create a css class for the div in js,
+but I would need to create a separate css file in order to change its style.
