@@ -103,7 +103,6 @@ const canvas = document.createElement("canvas");
 canvas.id = "myCanvas";
 canvas.width = 300;
 canvas.height = 150;
-canvas.style.border = "1px solid black";
 canvas.style.border = "2px solid black";
 
 
@@ -115,3 +114,18 @@ const context = canvas.getContext("2d");
 context.fillStyle = "red";
 context.fillRect(0, 0, 300, 50);
 context.fillRect(0, 100, 300, 50);
+
+// dom element: select / option
+const select = document.getElementById("color");
+// add another color
+const newOption = document.createElement("option");
+newOption.value = "pink";
+newOption.textContent = "Pink";
+select.appendChild(newOption);
+// change the default selected color to the newly added one
+select.selectedIndex = 4;
+// number of available options and show it in developer tools
+select.options.length
+console.log(select.options.length)
+// print the current selected color
+console.log(select.value)

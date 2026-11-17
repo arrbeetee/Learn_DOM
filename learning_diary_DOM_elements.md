@@ -144,3 +144,20 @@ canvas.getContext("2d")
 
 created a canvas board and drew the austrian flag with a black border
 getContext("2d") --> Context gives the drawing tools, 2d means the browser draws the pixels flat.
+
+<!-- select / option  -->
+call the id
+const select = getElementsById = ("color");
+
+Access to:
+select.value — the value of the currently chosen option. For example, choosing Purple gives "purple". You can also set it: select.value = "purple".
+select.options — the collection of all the dropdown’s <option> elements. select.options.length tells you how many there are.
+select.selectedIndex — the position of the chosen option, starting at 0. In your list, Red is 0, Green is 1, Blue is 2, and Purple is 3.
+select.disabled — true if the whole dropdown is disabled; otherwise false.
+option.text — the text shown for one choice, such as "Purple".
+option.selected — true if that option is currently chosen.
+option.disabled — true if that particular choice can’t be selected.
+
+Added a new color pink.
+Counted the available options and printed the default selected color in the developer tools.
+Changed the default selected color.
