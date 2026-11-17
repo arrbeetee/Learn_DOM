@@ -104,8 +104,29 @@ table.rows - gives all rows, including the header row
 table.head - access the head section
 table.body - access the body section
 table.caption - access to the tables caption
-table.style - changes the appearance
+table.style - changes the inline style
 
 Changed the style and edited the text of the first cell from Name to FirstName.
 I was able to change the name of the person Anna to Maria.
 Also added a table caption to tell that the table represents the people's name and age.
+
+<!-- ul -->
+ul is  an HTML tag for an unordered list - a list where the items appear with bullet points
+call the ul
+const list = document.getElementById("myList");
+
+Access to
+list.id - reads or changes the id
+list.children - gets its li items. For example list.children.length counts them
+list.textContent - reads or replaces all the list's text
+list.classList - adds or removes CSS elements
+list.style - changes the inline style
+
+Counted ul content and showed the result in the developer tools.
+Changed the item 3 to the last item.
+Edited the inline text color to green.
+
+children refers to the element’s child elements.
+For example, the <ul> is the parent, and the <li> elements inside it are its children.
+HTML is arranged like a family tree. list.children[1] refers to the second <li> element in the list,
+because JS starts indexing with 0.

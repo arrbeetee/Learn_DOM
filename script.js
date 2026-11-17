@@ -81,3 +81,17 @@ table.tBodies[0].rows[0].cells[0].textContent = "Maria";
 // create a caption for the table
 const caption = table.createCaption();
 caption.textContent = "People and their ages";
+
+
+// dom element: ul
+// const list = document.getElementById("myList");  <-- deactivated because already on top
+
+// count the list and show it in the developer tools
+list.children.length;
+console.log(list.children.length);
+
+// replace the text content of the list
+list.children[2].textContent = "The last item";
+
+// edit the inline style
+list.style.color = "green"
